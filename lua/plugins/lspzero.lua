@@ -36,9 +36,16 @@ return {
         cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
         event = { 'BufReadPre', 'BufNewFile' },
         dependencies = {
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+            "williamboman/mason.nvim",
+            "williamboman/mason-lspconfig.nvim",
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
+            "hrsh7th/nvim-cmp",
+            "L3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip",
+            "j-hui/fidget.nvim",
         },
         init = function()
             -- Reserve a space in the gutter
@@ -94,6 +101,7 @@ return {
             cmp.setup({
                 sources = {
                     { name = 'nvim_lsp' },
+                    { name = 'luasnip' },
                 },
                 snippet = {
                     expand = function(args)

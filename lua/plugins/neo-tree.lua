@@ -16,6 +16,19 @@ return {
                     ['b'] = function() vim.api.nvim_exec('Neotree focus buffers left', true) end,
                     ['g'] = function() vim.api.nvim_exec('Neotree focus git_status left', true) end,
                 }
+            },
+            filesystem = {
+                filtered_items = {
+                    visible = false,
+                    show_hidden_count = true,
+                    hide_dotfiles = true,
+                    hide_gitignored = true,
+                    hide_by_name = {
+                        -- '.git',
+                        -- "node_modules"
+                    },
+                    never_show = {},
+                },
             }
         })
         vim.keymap.set("n", "<leader>jv", "<Cmd>Neotree toggle<CR>")

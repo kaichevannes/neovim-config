@@ -20,18 +20,11 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Paste from system clipboard.
-vim.keymap.set("n", "<leader>p", function()
-    vim.cmd('normal! "+p')
-    if vim.fn.search("\\r", "n") > 0 then
-        vim.cmd('normal! :%s/\r//g<CR>')
-    end
-end)
-vim.keymap.set("n", "<leader>P", function()
-    vim.cmd('normal! "+P')
-    if vim.fun.search("\\r", "n" > 0) then
-        vim.cmd('normal! :%s/\r//g<CR>')
-    end
-end)
+vim.keymap.set("n", "<leader>p", "\"+p")
+vim.keymap.set("n", "<leader>P", "\"+P")
+
+-- Remove windows carriage returns
+vim.keymap.set("n", "<leader>m", ":%s/\r//g<CR>")
 
 -- Avoid accidentally entering Ex mode.
 vim.keymap.set("n", "Q", "<nop>")
