@@ -45,5 +45,5 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<C-x>", "<cmd>normal! <C-a><CR>")
 vim.keymap.set("n", "<C-z>", "<cmd>normal! <C-x><CR>")
 
--- Compile file cpp
-vim.keymap.set("n", "<F5>", "<cmd>!g++ -o %:r.o % && ./%r.o<CR>")
+-- Compile file
+vim.keymap.set("n", "<F5>", "<cmd>!make %:r<CR>")
