@@ -46,4 +46,4 @@ vim.keymap.set("n", "<C-x>", "<cmd>normal! <C-a><CR>")
 vim.keymap.set("n", "<C-z>", "<cmd>normal! <C-x><CR>")
 
 -- Compile file
-vim.keymap.set("n", "<F5>", "<cmd>!make %:r<CR>")
+vim.keymap.set("n", "<F5>", "<cmd>make %:r<CR>")
