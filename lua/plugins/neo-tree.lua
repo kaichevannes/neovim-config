@@ -22,7 +22,7 @@ return {
                     visible = false,
                     show_hidden_count = true,
                     hide_dotfiles = true,
-                    hide_gitignored = true,
+                    hide_gitignored = false,
                     hide_by_name = {
                         -- '.git',
                         -- "node_modules"
